@@ -1,0 +1,967 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+@font-face {
+  font-family: 'Bergamasco';
+  src: url('../assets/fonts/Bergamasco Light.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vetrino';
+  src: url('../assets/fonts/Vetrino.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Poiret One", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  scroll-behavior: smooth;
+  scroll-padding-top: 1.25rem;
+}
+
+:root {
+  --heading-font: "Vetrino", serif;
+  --base-color: #E5F2FA;
+  --special-color: #3A5284;
+  --description-color: #E5F2FA;
+}
+
+/* BASE */
+body {
+  background-color: var(--base-color);
+  margin: 0;
+  scrollbar-gutter: stable;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--base-color);
+}
+
+ul, ol, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 75.3125rem;
+  width: clamp(90%, 80%, 80%);
+  margin: 0 auto;
+}
+
+.section-heading {
+  font-family: var(--heading-font);
+  font-size: clamp(1.875rem, 1.3468rem + 2.2535vw, 3.375rem);
+  font-weight: 400;
+  line-height: clamp(2.0625rem, 1.4903rem + 2.4413vw, 3.6875rem);
+  text-transform: none;
+}
+
+.title {
+  font-size: clamp(1.0625rem, 0.8864rem + 0.7512vw, 1.5625rem);
+  font-weight: 400;
+  line-height: clamp(1.3125rem, 1.0924rem + 0.939vw, 1.9375rem);
+  text-transform: none;
+  color: var(--description-color);
+}
+
+.description {
+  font-size: clamp(0.6875rem, 0.5114rem + 0.7512vw, 1.125rem);
+  font-weight: 400;
+  line-height: 1.52375rem;
+  color: var(--special-color);
+}
+
+.section-about__description,
+.section-place__description,
+.section-dress-code__description,
+.section-story__description,
+.section-contacts__description,
+.section-action__description {
+  font-size: clamp(0.875rem, 0.7rem + 1.2vw, 1.5rem);
+}
+
+.section-hero__names {
+  font-family: 'Bergamasco', serif;
+  font-size: clamp(2.5rem, 1.5rem + 4vw, 4.5rem);
+  color: var(--special-color);
+  margin: 1.25rem 0;
+}
+
+.button {
+  position: relative;
+  z-index: 2;
+  padding: 1.25rem 2.875rem;
+  border: none;
+  border-radius: 0.3125rem;
+  color: var(--base-color);
+  background-color: var(--special-color);
+  cursor: pointer;
+  font-size: clamp(0.9375rem, 0.8495rem + 0.3756vw, 1.1875rem);
+  font-weight: 500;
+  line-height: 1.525rem;
+  text-align: center;
+  transition: transform .3s ease, background-color .3s ease;
+}
+
+.button:hover {
+  background-color: #6694C1;
+}
+
+.button:active {
+  transform: scale(0.97);
+}
+
+/* DECORATIVE BARS */
+.decorative-bar {
+  width: clamp(50%, 80vw, 90%);
+  height: clamp(0.05rem, 0.1vw, 0.1rem);
+  background-color: var(--special-color);
+  margin: 0.25rem auto;
+}
+
+.wedding-day-bar:nth-child(2) {
+  width: clamp(10rem, 30vw, 20rem);
+  height: clamp(0.03rem, 0.05vw, 0.06rem);
+}
+
+.names-bar {
+  max-width: clamp(15.625rem, 50vw, 37.5rem);
+  height: 0.0625rem;
+  background-color: var(--special-color);
+  margin: 0.25rem auto;
+}
+
+/* MODAL */
+.modal {
+  max-width: 33.875rem;
+  width: 90%;
+  height: fit-content;
+  border: none;
+  padding: 0;
+  background-color: var(--base-color);
+  border-radius: 0.625rem;
+}
+
+.modal__heading {
+  font-family: var(--heading-font);
+  font-size: 2.5625rem;
+  margin-bottom: 1.875rem;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.4375rem 3.125rem;
+}
+
+.modal__input {
+  width: 100%;
+  padding: 1.1875rem 1.5625rem;
+  border: 0.0625rem solid #000000;
+  margin-bottom: 1.4375rem;
+  background-color: transparent;
+  border-radius: 0.3125rem;
+  font-size: clamp(0.6875rem, 0.5114rem + 0.7512vw, 1.125rem);
+}
+
+.modal__input:focus {
+  outline: 0.0625rem solid var(--special-color);
+}
+
+.modal__button {
+  margin-top: 1.5rem;
+}
+
+dialog,
+dialog::backdrop {
+  opacity: 0;
+  scale: 1;
+  background-color: #00000066;
+  transition-duration: .2s;
+  transition-behavior: allow-discrete;
+}
+
+dialog[open]::backdrop {
+  opacity: 1;
+}
+
+dialog[open] {
+  opacity: 1;
+}
+
+/* SECTION ANIMATIONS */
+.section-group, .section-group-story {
+  transform: translateY(3.125rem);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  background-color: transparent;
+}
+
+.section-group.visible, .section-group-story.visible {
+  opacity: 1 !important;
+  transform: translateY(0);
+}
+
+.section:not(.section-about):not(.section-date):not(.section-story):not(.section-action):not(.section-contacts) {
+  opacity: 0;
+  transform: translateY(3.125rem);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section:not(.section-about):not(.section-date):not(.section-story):not(.section-action):not(.section-contacts).visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* HERO */
+.section-hero {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.flower1 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: auto;
+  z-index: -1;
+}
+
+.section-hero__container {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  margin-top: clamp(4rem, 6vw, 6rem);
+}
+
+.section-hero__heading {
+  font-family: "Bergamasco", serif;
+  font-size: clamp(1.75rem, 0.7rem + 4.5vw, 4.5rem);
+  color: var(--special-color);
+  margin-bottom: 0.75rem;
+  text-transform: none;
+}
+
+.section-hero__description {
+  font-family: "Bergamasco", serif;
+  font-size: clamp(1.125rem, 0.9rem + 1.2vw, 2rem);
+  color: var(--special-color);
+  margin-bottom: clamp(1.5rem, 2vw, 2rem);
+  line-height: 1.2;
+}
+
+.hero__couple-photo {
+  max-width: clamp(10rem, 60vw, 45rem);
+  width: 100%;
+  height: auto;
+  margin: clamp(1.25rem, 2vw, 1.75rem) 0 clamp(0.75rem, 1.5vw, 1rem);
+  object-fit: contain;
+}
+
+/* ABOUT */
+.section-about {
+  background-color: var(--special-color);
+}
+
+.section-about__container {
+  padding: 9.375rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: transparent;
+}
+
+.section-about__heading {
+  margin-bottom: 1.875rem;
+  color: var(--base-color);
+}
+
+.section-about__description {
+  max-width: 70%;
+  color: var(--base-color);
+}
+
+/* DATE */
+.section-date {
+  background-color: var(--special-color);
+  position: relative;
+  min-height: 28rem;
+  padding-bottom: 2rem;
+}
+
+.flower2 {
+  position: absolute;
+  top: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: auto;
+  z-index: 0;
+}
+
+.section-date__container {
+  padding: 3.75rem 0 2rem;
+  text-align: center;
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+.section-date__heading {
+  margin-bottom: 1.875rem;
+  color: var(--base-color);
+}
+
+.section-date .calendar {
+  max-width: 50rem;
+  width: 100%;
+  height: auto;
+  margin: 1.25rem auto 1rem;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+/* PLACE */
+.section-place {
+  position: relative;
+  margin-top: 20rem;
+}
+
+.section-place__container {
+  padding: 3.75rem 0;
+  text-align: center;
+  background-color: var(--base-color);
+}
+
+.section-place__heading {
+  margin-bottom: 1.875rem;
+  color: var(--special-color);
+}
+
+.section-place__description {
+  color: var(--special-color);
+}
+
+.place__photos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+  max-width: 100%;
+  width: 100%;
+  flex-direction: row;
+  padding: 0 2.5rem;
+  overflow-x: auto;
+}
+
+.photos__slider {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: max-content;
+  max-width: none;
+}
+
+.place__photo {
+  max-width: clamp(20rem, 35vw, 25rem);
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  object-fit: contain;
+  display: block;
+}
+
+.slider-button {
+  display: none !important;
+}
+
+/* PRICE */
+.section-price {
+  width: 100%;
+  background-color: var(--base-color);
+  position: relative;
+}
+
+.section-price__container {
+  padding: 3.75rem 0;
+  position: static;
+}
+
+.section-price__heading {
+  margin-bottom: 1.875rem;
+  text-align: center;
+  color: var(--special-color);
+}
+
+.section-price__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.section-price__item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: var(--base-color);
+  position: relative;
+  min-height: 2.5rem;
+}
+
+.section-price__item-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  flex-wrap: nowrap;
+  gap: 0.25rem;
+}
+
+.section-price__item-time {
+  font-family: var(--heading-font);
+  font-size: clamp(1rem, 0.8rem + 0.8vw, 1.25rem);
+  color: var(--special-color);
+  text-align: left;
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.section-price__item-action {
+  font-family: var(--heading-font);
+  font-size: clamp(1rem, 0.8rem + 0.8vw, 1.25rem);
+  color: var(--special-color);
+  text-align: right;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  margin-left: auto;
+}
+
+.section-price__item-line {
+  position: absolute;
+  bottom: 0.25rem;
+  height: 1px;
+  background-color: var(--special-color);
+  left: calc(3.5ch + 0.25rem);
+  right: calc(3.5ch + 0.25rem);
+}
+
+.specific-margin {
+  margin-bottom: 3.625rem;
+}
+
+.slider-buttons {
+  display: none !important;
+}
+
+/* DRESS CODE */
+.section-dress-code {
+  background-color: var(--special-color);
+}
+
+.section-dress-code__container {
+  padding: 3.75rem 0;
+  text-align: center;
+  color: var(--base-color);
+}
+
+.section-dress-code__heading {
+  margin-bottom: 1.875rem;
+  color: var(--base-color);
+}
+
+.section-dress-code__description {
+  color: var(--base-color);
+}
+
+.dress-code__palette {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.palette-color {
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 50%;
+}
+
+/* STORY */
+.section-story {
+  width: 100%;
+  height: auto;
+  background-color: var(--base-color);
+}
+
+.section-story__container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3.75rem 0;
+  text-align: center;
+}
+
+.section-story__heading {
+  color: var(--special-color);
+  margin-bottom: 1.875rem;
+  font-size: clamp(1.5625rem, 0.9243rem + 2.723vw, 3.375rem);
+  text-align: center;
+}
+
+/* ACTION */
+.section-action {
+  width: 100%;
+  background-image: url('../assets/img/flower3.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.section-action__container {
+  padding: 3.75rem 0 0;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-action__content {
+  max-width: 50rem;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 1.875rem 2.5rem;
+  background-color: transparent;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.section-action__content .decorative-bar,
+.section-action .decorative-bar,
+.section-contacts .decorative-bar,
+.section-map .decorative-bar,
+.section-price .decorative-bar,
+.section-place .decorative-bar {
+  display: none !important;
+}
+
+.section-action__heading {
+  text-align: center;
+  margin-bottom: 1.875rem;
+  color: var(--special-color);
+}
+
+.section-action__description {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.iframe-wrapper {
+  width: 100%;
+  height: auto;
+  min-height: 50rem;
+  margin: 0;
+  padding: 0;
+}
+
+.section-action__content iframe {
+  width: 100%;
+  height: auto;
+  min-height: 50rem;
+  border: 0;
+  border-radius: 0;
+}
+
+/* CONTACTS */
+.section-contacts {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.section-contacts__container {
+  padding: 3.75rem 0 0;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-contacts__content {
+  max-width: 50rem;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 1.875rem 2.5rem;
+  background-color: rgba(229, 242, 250, 0.8);
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.section-contacts__heading {
+  text-align: center;
+  margin-bottom: 1.875rem;
+  color: var(--special-color);
+}
+
+.section-contacts__description {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* MAP */
+.section-map {
+  position: relative;
+  background-image: url('../assets/img/flower4.png');
+  background-size: 100% auto;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-color: var(--special-color);
+  min-height: 100vh;
+}
+
+.section-map__container {
+  padding: 0 0 3.75rem;
+  margin-top: 0;
+  text-align: center;
+}
+
+.section-map__content {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.section-map__heading {
+  margin-bottom: 1.875rem;
+  color: var(--base-color);
+}
+
+.section-map__names {
+  font-family: 'Bergamasco', serif;
+  font-size: clamp(2.5rem, 1.5rem + 4vw, 4.5rem);
+  color: var(--base-color);
+  margin: 1.25rem 0;
+}
+
+.section-map__description {
+  font-family: "Bergamasco", serif;
+  font-size: clamp(1rem, 0.8rem + 1.5vw, 2rem);
+  color: var(--base-color);
+  margin: 0.75rem 0;
+  line-height: 1.2;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-bottom: 1.875rem;
+}
+
+.countdown__item {
+  text-align: center;
+}
+
+.countdown__item span {
+  font-family: "Vetrino", sans-serif;
+  font-size: clamp(1.5rem, 1.2rem + 1.5vw, 1.75rem);
+  font-weight: 400;
+  color: var(--base-color);
+}
+
+.countdown__item p {
+  font-family: "Poiret One", sans-serif;
+  font-size: clamp(0.6875rem, 0.5114rem + 0.7512vw, 1.125rem);
+  font-weight: 400;
+  line-height: 1.52375rem;
+  color: var(--base-color);
+}
+
+.map-iframe-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.map__iframe {
+  width: 100%;
+  max-width: 100%;
+  height: 25rem;
+  border: 1px solid var(--base-color);
+  border-radius: 0.625rem;
+  margin-bottom: 1.25rem;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 48rem) {
+  .button { padding: 0.6875rem 1.875rem; }
+  .section-hero {
+    align-items: flex-start;
+    min-height: auto;
+  }
+  .section-hero__container { 
+    padding: 0.75rem 0.75rem 0.5rem;
+  }
+  .section-hero__heading { 
+    margin-bottom: 0.375rem;
+  }
+  .wedding-day-bar {
+    margin: 0 auto;
+  }
+  .section-hero__description { 
+    font-size: clamp(1rem, 0.8rem + 1vw, 1.75rem); 
+    margin-top: 0.375rem;
+    margin-bottom: clamp(1rem, 1.5vw, 1.25rem);
+  }
+  .section-hero__names { 
+    font-size: clamp(1.75rem, 1.2rem + 2.5vw, 3rem);
+    margin: 0.75rem 0;
+  }
+  .section-map__names {
+    font-size: clamp(1.75rem, 1.2rem + 2.5vw, 3rem);
+    margin: 0.75rem 0;
+  }
+  .section-map__description {
+    font-size: clamp(0.875rem, 0.6rem + 1.2vw, 1.5rem);
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+  }
+  .section-map__content {
+    margin: 0;
+    padding: 0;
+  }
+  .section-map__container { 
+    padding: 0 0 2.75rem !important;
+    margin-top: 0;
+  }
+  .section-map {
+    padding-bottom: 0.8125rem !important;
+    margin-bottom: 0;
+    min-height: auto;
+    background-size: 100% auto;
+  }
+  .hero__couple-photo { 
+    margin: clamp(0.75rem, 1.5vw, 1rem) 0 clamp(0.5rem, 1vw, 0.75rem);
+  }
+  .decorative-bar {
+    width: clamp(60%, 85vw, 95%);
+    margin: 0.1rem auto;
+  }
+  .wedding-day-bar:nth-child(2) {
+    width: clamp(8rem, 25vw, 15rem);
+  }
+  .wedding-day-bar:nth-child(3) {
+    width: clamp(12rem, 40vw, 25rem);
+  }
+  .section-about__container { 
+    padding: 2rem 0.9375rem;
+  }
+  .section-about__description { max-width: 90%; }
+  .section-about__heading { margin-bottom: 1.25rem; }
+  .section-date {
+    min-height: 15rem;
+    padding-bottom: 1rem;
+  }
+  .section-date__container {
+    padding: 2rem 0 1rem;
+  }
+  .section-date__heading, .section-place__heading, .section-dress-code__heading { 
+    margin-bottom: 0.75rem; 
+  }
+  .section-date .calendar {
+    max-width: clamp(20rem, 70vw, 26rem);
+    margin: 0.75rem auto 0.75rem;
+  }
+  .section-action__container { 
+    padding: 1.5rem 0 0; 
+    margin-bottom: 0;
+  }
+  .section-action__content { 
+    padding: 2rem 1.5625rem 2rem;
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+  .section-contacts__container { 
+    padding: 1.5rem 0 0; 
+    margin-bottom: 0;
+  }
+  .section-contacts__content { 
+    padding: 2rem 1.5625rem 2rem;
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+  .section-action__heading, .section-contacts__heading { margin-bottom: 1.25rem; }
+  .section-action__description, .section-contacts__description { margin-bottom: 0.75rem; }
+  .section-map__heading { margin-bottom: 0.75rem; }
+  .section-place {
+    margin-top: 4rem;
+  }
+  .section-place__container {
+    padding: 0.75rem 0;
+  }
+  .section-price__container {
+    padding: 1.5rem 0;
+    position: static;
+  }
+  .section-price__list {
+    gap: 0.75rem;
+  }
+  .section-price__item {
+    padding: 0.5rem 0.75rem;
+    min-height: 2rem;
+  }
+  .section-price__item-content {
+    gap: 0.1875rem;
+  }
+  .section-price__item-time,
+  .section-price__item-action {
+    font-size: clamp(0.875rem, 0.7rem + 0.7vw, 1.125rem);
+  }
+  .section-price__item-line {
+    bottom: 0.2rem;
+    left: calc(3.5ch + 0.1875rem);
+    right: calc(3.5ch + 0.1875rem);
+  }
+  .section-story__container {
+    padding: 1.5rem 0;
+  }
+  .section-dress-code__container {
+    padding: 1.5rem 0;
+  }
+  .place__photos {
+    flex-wrap: wrap;
+  }
+  .photos__slider {
+    flex-wrap: wrap;
+  }
+  .place__photo {
+    max-width: clamp(7.5rem, 60vw, 12.5rem);
+  }
+  .place__photo[data-id="place2"] {
+    display: none;
+  }
+  .section-action, .section-contacts {
+    background-size: contain;
+  }
+  .iframe-wrapper {
+    min-height: 30rem;
+  }
+  .section-action__content iframe {
+    min-height: 30rem;
+  }
+  .map__iframe {
+    height: 18.75rem;
+  }
+}
+
+@media (max-width: 34.375rem) {
+  .story__heading-br { display: none; }
+  .section-price__item {
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+@media (max-width: 26.5625rem) {
+  .section-hero__container {
+    padding: 0.5rem 0.5rem 0.375rem;
+  }
+  .section-hero__description { 
+    font-size: clamp(0.875rem, 0.7rem + 0.9vw, 1.5rem);
+    margin-bottom: clamp(0.75rem, 1vw, 1rem);
+  }
+  .section-hero__names { 
+    font-size: clamp(1.25rem, 0.9rem + 1.8vw, 2rem);
+    margin: 0.5rem 0;
+  }
+  .section-map__names {
+    font-size: clamp(1.25rem, 0.9rem + 1.8vw, 2rem);
+    margin: 0.5rem 0;
+  }
+  .section-map__description {
+    font-size: clamp(0.625rem, 0.5rem + 0.8vw, 1rem);
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+  }
+  .hero__couple-photo { 
+    margin: clamp(0.5rem, 1vw, 0.75rem) 0 clamp(0.375rem, 0.75vw, 0.5rem);
+  }
+  .decorative-bar {
+    width: clamp(60%, 85vw, 95%);
+    margin: 0.05rem auto;
+  }
+  .names-bar {
+    max-width: clamp(10rem, 40vw, 20rem);
+    margin: 0.05rem auto;
+  }
+  .wedding-day-bar {
+    margin: 0 auto;
+  }
+  .section-about__container {
+    padding: 1.5rem 0.9375rem;
+  }
+  .place__photos {
+    margin-top: 0.5rem;
+  }
+  .countdown { flex-wrap: wrap; }
+  .section-action__content iframe { min-height: 25rem; }
+  .iframe-wrapper { min-height: 25rem; }
+  .section-price__item {
+    padding: 0.375rem 0.5rem;
+    min-height: 1.75rem;
+  }
+  .section-price__item-content {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0.125rem;
+  }
+  .section-price__item-time,
+  .section-price__item-action {
+    font-size: clamp(0.75rem, 0.6rem + 0.6vw, 1rem);
+  }
+  .section-price__item-line {
+    bottom: 0.15rem;
+    left: calc(3.5ch + 0.125rem);
+    right: calc(3.5ch + 0.125rem);
+  }
+  .flower2 {
+    top: 3rem;
+  }
+  .section-date .calendar {
+    max-width: clamp(16rem, 65vw, 20rem);
+    margin: 0.75rem auto 0.75rem;
+  }
+}

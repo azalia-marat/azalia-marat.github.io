@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css?v=21">
+  <link rel="icon" href="./assets/img/svg/logo.svg" type="image/svg+xml">
+  <title>Приглашаем Вас!</title>
+</head>
+<body>
+  <dialog id="modal" class="modal">
+    <form method="dialog" class="modal__form">
+      <h3 class="section-heading modal__heading">Подтверждение присутствия</h3>
+      <input type="text" id="modal-name" minlength="3" required autocomplete="off" placeholder="Ваше имя и фамилия" class="description modal__input">
+      <select id="modal-attendance" class="description modal__input">
+        <option value="yes">Я приду!</option>
+        <option value="no">Не смогу быть</option>
+      </select>
+      <button type="submit" id="submit" class="button modal__button">Отправить</button>
+    </form>
+  </dialog>
+  
+  <section class="section section-hero">
+    <img src="./assets/img/flower1.png" alt="flower1" class="flower1">
+    <div class="container section-hero__container">
+      <h1 class="section-heading section-hero__heading">WEDDING DAY</h1>
+      <div class="decorative-bar wedding-day-bar"></div>
+      <h3 class="title section-hero__description">04 | 07 | 25</h3>
+      <img src="./assets/img/am_1.png" alt="Азалия и Марат" class="hero__couple-photo">
+      <div class="decorative-bar names-bar"></div>
+      <h3 class="title section-hero__names">Азалия & Марат</h3>
+      <div class="decorative-bar names-bar"></div>
+    </div>
+  </section>
+  
+  <div class="section-group">
+    <section id="about" class="section section-about">
+      <div class="container section-about__container">
+        <h3 class="section-heading section-about__heading">Дорогие друзья и родные!</h3>
+        <p class="description section-about__description">
+          Мы счастливы объявить, что решили соединить наши судьбы. Этот день мы хотим разделить с самыми близкими людьми, чтобы вместе отпраздновать начало нашей новой главы.
+        </p>
+      </div>
+    </section>
+    
+    <section id="date" class="section section-date">
+      <img src="./assets/img/flower2.png" alt="flower2" class="flower2">
+      <div class="container section-date__container">
+        <h3 class="section-heading section-date__heading">Будем ждать вас</h3>
+        <img src="./assets/img/calendar.png" alt="calendar" class="calendar">
+      </div>
+    </section>
+  </div>
+  
+  <section id="place" class="section section-place">
+    <div class="container section-place__container">
+      <h3 class="section-heading section-place__heading">Место проведения</h3>
+      <p class="description section-place__description">
+        Туристический комплекс Ургрун<br>
+        Центральная ул. 101, Ургуново<br>
+      </p>
+      <div class="place__photos">
+        <div class="photos__slider">
+          <img src="./assets/img/place1.jpg" alt="Place 1" class="place__photo">
+          <img src="./assets/img/place2.jpg" alt="Place 2" class="place__photo" data-id="place2">
+          <img src="./assets/img/place3.jpg" alt="Place 3" class="place__photo">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="price" class="section section-price">
+    <div class="container section-price__container">
+      <h3 class="section-heading section-price__heading">Распорядок дня</h3>
+      <ul class="section-price__list">
+        <li class="section-price__item">
+          <div class="section-price__item-content">
+            <span class="section-price__item-time">13:00</span>
+            <span class="section-price__item-action">Сбор гостей</span>
+          </div>
+          <div class="section-price__item-line"></div>
+        </li>
+        <li class="section-price__item">
+          <div class="section-price__item-content">
+            <span class="section-price__item-time">16:00</span>
+            <span class="section-price__item-action">Банкет</span>
+          </div>
+          <div class="section-price__item-line"></div>
+        </li>
+        <li class="section-price__item">
+          <div class="section-price__item-content">
+            <span class="section-price__item-time">23:00</span>
+            <span class="section-price__item-action">Окончание</span>
+          </div>
+          <div class="section-price__item-line"></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  
+  <section id="dress-code" class="section section-dress-code">
+    <div class="container section-dress-code__container">
+      <h3 class="section-heading section-dress-code__heading">Дресс-код</h3>
+      <p class="description section-dress-code__description">Пожалуйста, не дарите цветы, мы хотим сохранить их красоту в вашем сердце</p>
+      <div class="dress-code__palette">
+        <div class="palette-color" style="background-color: #E5F2FA;"></div>
+        <div class="palette-color" style="background-color: #BCDEF7;"></div>
+        <div class="palette-color" style="background-color: #8BC9F2;"></div>
+        <div class="palette-color" style="background-color: #67B9F3;"></div>
+        <div class="palette-color" style="background-color: #3B8FCB;"></div>
+      </div>
+    </div>
+  </section>
+  
+  <div class="section-group-story">
+    <section class="section section-story">
+      <div class="container section-story__container">
+        <h2 class="section-heading section-story__heading">Детали</h2>
+        <p class="description section-story__description">Пожалуйста, не дарите цветы, мы хотим сохранить их красоту в вашем сердце</p>
+      </div>
+    </section>
+    
+    <section id="action" class="section section-action">
+      <div class="container section-action__container">
+        <div class="section-action__content">
+          <h3 class="section-heading section-action__heading">Вы придете?</h3>
+          <p class="description section-action__description">
+            Подтвердите ваше присутствие, чтобы мы могли подготовиться к встрече с вами!
+          </p>
+          <div class="iframe-wrapper">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfmXUxqEXB91FK9hWQEoM1Qwwf7RSURi90xYLOZEvgBtf2Jhw/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="contacts" class="section section-contacts">
+      <div class="container section-contacts__container">
+        <div class="section-contacts__content">
+          <h3 class="section-heading section-contacts__heading">Контакты</h3>
+          <p class="description section-contacts__description">
+            Свяжитесь с нами для уточнения деталей мероприятия. Мы будем рады ответить на ваши вопросы!
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <section id="map" class="section section-map">
+    <div class="container section-map__container">
+      <div class="section-map__content">
+        <h3 class="section-heading section-map__heading">До встречи!</h3>
+        <div class="countdown">
+          <div class="countdown__item">
+            <span id="days">00</span>
+            <p>дней</p>
+          </div>
+          <div class="countdown__item">
+            <span id="hours">00</span>
+            <p>часов</p>
+          </div>
+          <div class="countdown__item">
+            <span id="minutes">00</span>
+            <p>минут</p>
+          </div>
+          <div class="countdown__item">
+            <span id="seconds">00</span>
+            <p>секунд</p>
+          </div>
+        </div>
+        <div class="map-iframe-wrapper">
+          <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1512.891415424106!2d59.39444282605667!3d54.410367801968285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43d075efa84d1699%3A0xba36f8f63064513a!2z0KLRg9GA0LjRgdGC0LjRh9C10YHQutC40Lkg0LrQvtC80L_Qu9C10LrRgSAi0KPRgNCz0YPQvSI!5e0!3m2!1sru!2sfr!4v1746993078504!5m2!1sru!2sfr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <h3 class="title section-map__names">Азалия & Марат</h3>
+        <div class="decorative-bar names-bar"></div>
+        <h3 class="title section-map__description">04 | 07 | 25</h3>
+      </div>
+    </div>
+  </section>
+  
+  <script defer src="./js/main.js" type="text/javascript"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93daca2508567bc0',t:'MTc0Njg5NDI5NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body>
+</html>
