@@ -749,45 +749,45 @@ dialog[open] {
     padding: 0.75rem 0.75rem 0.5rem;
   }
   .section-hero__heading { 
-    font-size: clamp(2.2656rem, 0.9531rem + 5.625vw, 5.7813rem);
-    margin-bottom: 0.4688rem;
+    font-size: clamp(1.8125rem, 0.7625rem + 4.5vw, 4.625rem);
+    margin-bottom: 0.375rem;
   }
   .wedding-day-bar {
-    width: clamp(75%, 90vw, 100%);
-    height: 0.125rem;
-    margin: 0.125rem auto;
+    width: clamp(60%, 85vw, 95%);
+    height: 0.1rem;
+    margin: 0.25rem auto;
   }
   .wedding-day-bar:nth-child(2) {
-    width: clamp(10rem, 31.25vw, 18.75rem);
-    height: 0.075rem;
+    width: clamp(8rem, 25vw, 15rem);
+    height: 0.06rem;
   }
   .wedding-day-bar:nth-child(3) {
-    width: clamp(15rem, 50vw, 31.25rem);
-    height: 0.125rem;
+    width: clamp(12rem, 40vw, 40rem);
+    height: 0.1rem;
   }
   .section-hero__description { 
-    font-size: clamp(1.5625rem, 1.25rem + 1.5vw, 2.6563rem);
+    font-size: clamp(1.25rem, 1rem + 1.2vw, 2.125rem);
     font-weight: 500;
-    margin-top: 0.4688rem;
-    margin-bottom: clamp(1.25rem, 1.875vw, 1.5625rem);
+    margin-top: 0.375rem;
+    margin-bottom: clamp(1rem, 1.5vw, 1.25rem);
   }
   .am_1 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
   }
   .section-hero__container .names-bar:first-of-type {
-    margin-top: 0.5rem;
+    margin-top: 0.75rem;
     margin-bottom: 0.25rem;
   }
   .section-hero__container .names-bar:last-of-type {
     margin-top: 0.25rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
   }
   .section-hero__names { 
     font-size: clamp(1.75rem, 1.2rem + 2.5vw, 3rem);
     margin: 0.75rem 0;
   }
   .hero__couple-photo { 
-    margin: clamp(0.75rem, 1.5vw, 1rem) 0 clamp(1rem, 2vw, 1.5rem);
+    margin: clamp(0.75rem, 1.5vw, 1rem) 0 clamp(1.5rem, 3vw, 2.25rem);
   }
   .section-map__names {
     font-size: clamp(2.25rem, 1.6rem + 2.5vw, 3.5rem);
@@ -996,37 +996,37 @@ dialog[open] {
     padding: 0.5rem 0.5rem 0.375rem;
   }
   .section-hero__heading {
-    font-size: clamp(1.7188rem, 1.0313rem + 2.25vw, 2.6563rem);
-    margin-bottom: 0.4688rem;
+    font-size: clamp(1.25rem, 0.625rem + 2vw, 2rem);
+    margin-bottom: 0.375rem;
   }
   .wedding-day-bar {
-    width: clamp(75%, 90vw, 100%);
-    height: 0.125rem;
-    margin: 0.0625rem auto;
+    width: clamp(60%, 85vw, 95%);
+    height: 0.1rem;
+    margin: 0.05rem auto;
   }
   .wedding-day-bar:nth-child(2) {
-    width: clamp(10rem, 31.25vw, 18.75rem);
-    height: 0.075rem;
+    width: clamp(8rem, 25vw, 15rem);
+    height: 0.06rem;
   }
   .wedding-day-bar:nth-child(3) {
-    width: clamp(15rem, 50vw, 31.25rem);
-    height: 0.125rem;
+    width: clamp(12rem, 40vw, 40rem);
+    height: 0.1rem;
   }
   .section-hero__description {
-    font-size: clamp(1.25rem, 1.0313rem + 1.125vw, 2.0313rem);
+    font-size: clamp(1rem, 0.75rem, 25%);
     font-weight: 500;
-    margin-bottom: clamp(0.9375rem, 1.25vw, 1.25rem);
+    margin-bottom: clamp(0.5rem, 0.75vw, 0.75rem);
   }
   .am_1 {
-    margin-bottom: 0.1rem;
+    margin-bottom: 0.15rem;
   }
   .section-hero__container .names-bar:first-of-type {
-    margin-top: 0.1rem;
+    margin-top: 0.15rem;
     margin-bottom: 0.05rem;
   }
   .section-hero__container .names-bar:last-of-type {
     margin-top: 0.05rem;
-    margin-bottom: 0.1rem;
+    margin-bottom: 0.15rem;
   }
   .names-bar {
     max-width: clamp(10rem, 40vw, 20rem);
@@ -1037,7 +1037,7 @@ dialog[open] {
     margin: 0.5rem 0;
   }
   .hero__couple-photo {
-    margin: clamp(0.5rem, 1vw, 0.75rem) 0 clamp(0.75rem, 1.5vw, 1rem);
+    margin: clamp(0.5rem, 1vw, 0.75rem) 0 clamp(1.125rem, 2.25vw, 1.5rem);
   }
   .section-map__names {
     font-size: clamp(1.75rem, 1.3rem + 1.8vw, 2.5rem);
