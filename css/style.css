@@ -412,10 +412,11 @@ dialog[open] {
 .section-price__container {
   padding: 3.75rem 0;
   position: static;
+  margin-bottom: 3.5rem;
 }
 
 .section-price__heading {
-  margin-bottom: 1.875rem;
+  margin-bottom: 3.5rem;
   text-align: center;
   color: var(--special-color);
 }
@@ -428,23 +429,20 @@ dialog[open] {
 }
 
 .section-price__item {
+  position: relative;
+  padding: 0.75rem 1rem;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  padding: 0.75rem 1rem;
-  background-color: var(--base-color);
-  position: relative;
-  min-height: 2.5rem;
+  align-items: center;
 }
 
 .section-price__item-content {
+  width: 60%;
+  max-width: 30rem;
+  margin: 0 auto;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
-  flex-wrap: nowrap;
-  gap: 0.25rem;
 }
 
 .section-price__item-time {
@@ -462,17 +460,18 @@ dialog[open] {
   color: var(--special-color);
   text-align: right;
   flex: 0 0 auto;
+  margin-left: 0;
   white-space: nowrap;
-  margin-left: auto;
 }
 
 .section-price__item-line {
   position: absolute;
   bottom: 0.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
   height: 1px;
   background-color: var(--special-color);
-  left: calc(3.5ch + 0.25rem);
-  right: calc(3.5ch + 0.25rem);
 }
 
 .specific-margin {
@@ -922,23 +921,34 @@ dialog[open] {
     min-height: 2rem;
   }
   .section-price__item-content {
-    gap: 0.1875rem;
+    width: 90%;
+    max-width: 16rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   .section-price__item-time,
   .section-price__item-action {
-    font-size: clamp(0.875rem, 0.7rem + 0.7vw, 1.125rem);
+    flex: initial;
   }
   .section-price__item-line {
-    bottom: 0.2rem;
-    left: calc(3.5ch + 0.1875rem);
-    right: calc(3.5ch + 0.1875rem);
+    position: absolute;
+    bottom: 0.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 1px;
+    background-color: var(--special-color);
   }
+  .section-price__item-action {
+  margin-left: 0;
+}
   .section-story__container {
     padding: 1.5rem 0;
   }
   .section-story__heading {
-    font-size: clamp(1.625rem, 0.9868rem + 2.723vw, 3.4375rem);
-    margin-bottom: 0.75rem;
+    font-size: clamp(2.125rem, 1.5rem + 2.5vw, 3.25rem);
   }
   .section-story__description {
     font-size: clamp(1rem, 0.825rem + 1.2vw, 1.625rem);
