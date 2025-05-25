@@ -1,184 +1,1474 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.css?v=21">
-  <link rel="icon" href="./assets/img/svg/logo.svg" type="image/svg+xml">
-  <title>Приглашаем Вас!</title>
-</head>
-<body>
-  <dialog id="modal" class="modal">
-    <form method="dialog" class="modal__form">
-      <h3 class="section-heading modal__heading">Подтверждение присутствия</h3>
-      <input type="text" id="modal-name" minlength="3" required autocomplete="off" placeholder="Ваше имя и фамилия" class="description modal__input">
-      <select id="modal-attendance" class="description modal__input">
-        <option value="yes">Я приду!</option>
-        <option value="no">Не смогу быть</option>
-      </select>
-      <button type="submit" id="submit" class="button modal__button">Отправить</button>
-    </form>
-  </dialog>
-  
-  <section class="section section-hero">
-    <img src="./assets/img/flower1.png" alt="flower1" class="flower1">
-    <div class="container section-hero__container">
-      <h1 class="section-heading section-hero__heading">WEDDING DAY</h1>
-      <div class="decorative-bar wedding-day-bar"></div>
-      <h3 class="title section-hero__description">04 | 07 | 25</h3>
-      <img src="./assets/img/am_1.png" alt="Азалия и Марат" class="hero__couple-photo">
-      <div class="decorative-bar names-bar"></div>
-      <h3 class="title section-hero__names">Азалия & Марат</h3>
-      <div class="decorative-bar names-bar"></div>
-    </div>
-  </section>
-  
-  <div class="section-group">
-    <section id="about" class="section section-about">
-      <div class="container section-about__container">
-        <h3 class="section-heading section-about__heading">Дорогие друзья и родные!</h3>
-        <p class="description section-about__description">
-          Мы счастливы объявить, что решили соединить наши судьбы. Этот день мы хотим разделить с самыми близкими людьми, чтобы вместе отпраздновать начало нашей новой главы.
-        </p>
-      </div>
-    </section>
-    
-    <section id="date" class="section section-date">
-      <img src="./assets/img/flower2.png" alt="flower2" class="flower2">
-      <div class="container section-date__container">
-        <h3 class="section-heading section-date__heading">Будем ждать вас</h3>
-        <img src="./assets/img/calendar.png" alt="calendar" class="calendar">
-      </div>
-    </section>
-  </div>
-  
-  <section id="place" class="section section-place">
-    <div class="container section-place__container">
-      <h3 class="section-heading section-place__heading">Место проведения</h3>
-      <p class="description section-place__description">
-        Туристический комплекс Ургрун<br>
-        Центральная ул. 101, Ургуново<br>
-      </p>
-      <div class="place__photos">
-        <div class="photos__slider">
-          <img src="./assets/img/place1.jpg" alt="Place 1" class="place__photo">
-          <img src="./assets/img/place2.jpg" alt="Place 2" class="place__photo" data-id="place2">
-          <img src="./assets/img/place3.jpg" alt="Place 3" class="place__photo">
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <section id="price" class="section section-price">
-    <div class="container section-price__container">
-      <h3 class="section-heading section-price__heading">Распорядок дня</h3>
-      <ul class="section-price__list">
-        <li class="section-price__item">
-          <div class="section-price__item-content">
-            <span class="section-price__item-time">13:00</span>
-            <span class="section-price__item-action">Сбор гостей</span>
-          </div>
-          <div class="section-price__item-line"></div>
-        </li>
-        <li class="section-price__item">
-          <div class="section-price__item-content">
-            <span class="section-price__item-time">16:00</span>
-            <span class="section-price__item-action">Банкет</span>
-          </div>
-          <div class="section-price__item-line"></div>
-        </li>
-        <li class="section-price__item">
-          <div class="section-price__item-content">
-            <span class="section-price__item-time">23:00</span>
-            <span class="section-price__item-action">Окончание</span>
-          </div>
-          <div class="section-price__item-line"></div>
-        </li>
-      </ul>
-    </div>
-  </section>
-  
-  <section id="dress-code" class="section section-dress-code">
-    <div class="container section-dress-code__container">
-      <h3 class="section-heading section-dress-code__heading">Дресс-код</h3>
-      <p class="description section-dress-code__description">Пожалуйста, не дарите цветы, мы хотим сохранить их красоту в вашем сердце</p>
-      <div class="dress-code__palette">
-        <div class="palette-color" style="background-color: #E5F2FA;"></div>
-        <div class="palette-color" style="background-color: #BCDEF7;"></div>
-        <div class="palette-color" style="background-color: #8BC9F2;"></div>
-        <div class="palette-color" style="background-color: #67B9F3;"></div>
-        <div class="palette-color" style="background-color: #3B8FCB;"></div>
-      </div>
-    </div>
-  </section>
-  
-  <div class="section-group-story">
-    <section class="section section-story">
-      <div class="container section-story__container">
-        <h2 class="section-heading section-story__heading">Детали</h2>
-        <p class="description section-story__description">Пожалуйста, не дарите цветы, мы хотим сохранить их красоту в вашем сердце</p>
-      </div>
-    </section>
-    
-    <section id="action" class="section section-action">
-      <div class="container section-action__container">
-        <div class="section-action__content">
-          <h3 class="section-heading section-action__heading">Вы придете?</h3>
-          <p class="description section-action__description">
-            Подтвердите ваше присутствие, чтобы мы могли подготовиться к встрече с вами!
-          </p>
-          <div class="iframe-wrapper">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfmXUxqEXB91FK9hWQEoM1Qwwf7RSURi90xYLOZEvgBtf2Jhw/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <section id="contacts" class="section section-contacts">
-      <div class="container section-contacts__container">
-        <div class="section-contacts__content">
-          <h3 class="section-heading section-contacts__heading">Контакты</h3>
-          <p class="description section-contacts__description">
-            Свяжитесь с нами для уточнения деталей мероприятия. Мы будем рады ответить на ваши вопросы!
-          </p>
-        </div>
-      </div>
-    </section>
-  </div>
-  
-  <section id="map" class="section section-map">
-    <div class="container section-map__container">
-      <div class="section-map__content">
-        <h3 class="section-heading section-map__heading">До встречи!</h3>
-        <div class="countdown">
-          <div class="countdown__item">
-            <span id="days">00</span>
-            <p>дней</p>
-          </div>
-          <div class="countdown__item">
-            <span id="hours">00</span>
-            <p>часов</p>
-          </div>
-          <div class="countdown__item">
-            <span id="minutes">00</span>
-            <p>минут</p>
-          </div>
-          <div class="countdown__item">
-            <span id="seconds">00</span>
-            <p>секунд</p>
-          </div>
-        </div>
-        <div class="map-iframe-wrapper">
-          <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1512.891415424106!2d59.39444282605667!3d54.410367801968285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43d075efa84d1699%3A0xba36f8f63064513a!2z0KLRg9GA0LjRgdGC0LjRh9C10YHQutC40Lkg0LrQvtC80L_Qu9C10LrRgSAi0KPRgNCz0YPQvSI!5e0!3m2!1sru!2sfr!4v1746993078504!5m2!1sru!2sfr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <h3 class="title section-map__names">Азалия & Марат</h3>
-        <div class="decorative-bar names-bar"></div>
-        <h3 class="title section-map__description">04 | 07 | 25</h3>
-      </div>
-    </div>
-  </section>
-  
-  <script defer src="./js/main.js" type="text/javascript"></script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93daca2508567bc0',t:'MTc0Njg5NDI5NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
-</body>
-</html>
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+@font-face {
+  font-family: 'Bergamasco';
+  src: url('../assets/fonts/Bergamasco Light.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vetrino';
+  src: url('../assets/fonts/Vetrino.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Poiret One", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  scroll-behavior: smooth;
+  scroll-padding-top: 1.25rem;
+}
+
+:root {
+  --heading-font: "Vetrino", serif;
+  --base-color: #E5F2FA;
+  --special-color: #3A5284;
+  --description-color: #E5F2FA;
+}
+
+/* BASE */
+body {
+  background-color: var(--base-color);
+  margin: 0;
+  scrollbar-gutter: stable;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--base-color);
+}
+
+ul, ol, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 75.3125rem;
+  width: clamp(90%, 80%, 80%);
+  margin: 0 auto;
+}
+
+.section-heading {
+  font-family: var(--heading-font);
+  font-size: clamp(1.875rem, 1.3468rem + 2.2535vw, 3.375rem);
+  font-weight: 400;
+  line-height: clamp(2.0625rem, 1.4903rem + 2.4413vw, 3.6875rem);
+  text-transform: none;
+}
+
+.title {
+  font-size: clamp(1.0625rem, 0.8864rem + 0.7512vw, 1.5625rem);
+  font-weight: 400;
+  line-height: clamp(1.3125rem, 1.0924rem + 0.939vw, 1.9375rem);
+  text-transform: none;
+  color: var(--description-color);
+}
+
+.description {
+  font-size: clamp(0.6875rem, 0.5114rem + 0.7512vw, 1.125rem);
+  font-weight: 500;
+  line-height: 1.52375rem;
+  color: var(--special-color);
+}
+
+.section-about__description,
+.section-place__description,
+.section-dress-code__description,
+.section-story__description,
+.section-contacts__description,
+.section-action__description {
+  font-size: clamp(0.875rem, 0.7rem + 1.2vw, 1.5rem);
+  font-weight: 500;
+  margin: 0 auto;
+}
+
+.section-hero__names {
+  font-family: 'Bergamasco', serif;
+  font-size: clamp(2.5rem, 1.5rem + 4vw, 4.5rem);
+  color: var(--special-color);
+  margin: 2rem 0;
+}
+
+.button {
+  position: relative;
+  z-index: 2;
+  padding: 1.25rem 2.875rem;
+  border: none;
+  border-radius: 0.3125rem;
+  color: var(--base-color);
+  background-color: var(--special-color);
+  cursor: pointer;
+  font-size: clamp(0.9375rem, 0.8495rem + 0.3756vw, 1.1875rem);
+  font-weight: 500;
+  line-height: 1.525rem;
+  text-align: center;
+  transition: transform .3s ease, background-color .3s ease;
+}
+
+.button:hover {
+  background-color: #6694C1;
+}
+
+.button:active {
+  transform: scale(0.97);
+}
+
+/* DECORATIVE BARS */
+.decorative-bar {
+  width: clamp(50%, 80vw, 90%);
+  height: clamp(0.05rem, 0.1vw, 0.1rem);
+  background-color: var(--special-color);
+  margin: 0.25rem auto;
+}
+
+.wedding-day-bar:nth-child(2) {
+  width: clamp(10rem, 30vw, 20rem);
+  height: clamp(0.03rem, 0.05vw, 0.06rem);
+}
+
+.names-bar {
+  max-width: clamp(15.625rem, 50vw, 37.5rem);
+  height: 0.0625rem;
+  background-color: var(--special-color);
+  margin: 0.5rem auto;
+}
+
+.section-map .names-bar {
+  background-color: var(--base-color);
+  margin: 2rem auto;
+}
+
+/* MODAL */
+.modal {
+  max-width: 33.875rem;
+  width: 90%;
+  height: fit-content;
+  border: none;
+  padding: 0;
+  background-color: var(--base-color);
+  border-radius: 0.625rem;
+}
+
+.modal__heading {
+  font-family: var(--heading-font);
+  font-size: 2.5625rem;
+  margin-bottom: 1.875rem;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.4375rem 3.125rem;
+}
+
+.modal__input {
+  width: 100%;
+  padding: 1.1875rem 1.5625rem;
+  border: 0.0625rem solid #000000;
+  margin-bottom: 1.4375rem;
+  background-color: transparent;
+  border-radius: 0.3125rem;
+  font-size: clamp(0.6875rem, 0.5114rem + 0.7512vw, 1.125rem);
+}
+
+.modal__input:focus {
+  outline: 0.0625rem solid var(--special-color);
+}
+
+.modal__button {
+  margin-top: 1.5rem;
+}
+
+dialog,
+dialog::backdrop {
+  opacity: 0;
+  scale: 1;
+  background-color: #00000066;
+  transition-duration: .2s;
+  transition-behavior: allow-discrete;
+}
+
+dialog[open]::backdrop {
+  opacity: 1;
+}
+
+dialog[open] {
+  opacity: 1;
+}
+
+/* SECTION ANIMATIONS */
+.section-group, .section-group-story {
+  transform: translateY(3.125rem);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  background-color: transparent;
+}
+
+.section-group-story {
+  background-image: url('../assets/img/flower3.png');
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: translateY(3.125rem);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  background-color: transparent;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.section-group.visible, .section-group-story.visible {
+  opacity: 1 !important;
+  transform: translateY(0);
+}
+
+.section:not(.section-about):not(.section-date):not(.section-story):not(.section-action):not(.section-contacts) {
+  opacity: 0;
+  transform: translateY(3.125rem);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section:not(.section-about):not(.section-date):not(.section-story):not(.section-action):not(.section-contacts).visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* TEXT WRAPPER */
+.text-wrapper {
+  max-width: 70%;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* HERO */
+.section-hero {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  clip-path: inset(0);
+}
+
+.flower1 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: auto;
+  max-height: 100%;
+  z-index: -1;
+}
+
+.section-hero__container {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  margin-top: clamp(4rem, 6vw, 6rem);
+}
+
+.section-hero__heading {
+  font-family: "Bergamasco", serif;
+  font-size: clamp(1.75rem, 0.7rem + 4.5vw, 4.5rem);
+  color: var(--special-color);
+  margin-bottom: 0.75rem;
+  text-transform: none;
+}
+
+.section-hero__description {
+  font-family: "Bergamasco", serif;
+  font-size: clamp(1.125rem, 0.9rem + 1.2vw, 2rem);
+  font-weight: 500;
+  color: var(--special-color);
+  margin-bottom: clamp(1.5rem, 2vw, 2rem);
+  line-height: 1.2;
+}
+
+.hero__couple-photo {
+  max-width: clamp(10rem, 60vw, 45rem);
+  width: 100%;
+  height: auto;
+  margin: clamp(1.25rem, 2vw, 1.75rem) 0 clamp(1.5rem, 2.5vw, 2rem);
+  object-fit: contain;
+}
+
+/* ABOUT */
+.section-about {
+  background-color: var(--special-color);
+}
+
+.section-about__container {
+  padding: 9.375rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: transparent;
+}
+
+.section-about__heading {
+  margin-bottom: 1.875rem;
+  color: var(--base-color);
+}
+
+.section-about__description {
+  color: var(--base-color);
+}
+
+/* DATE */
+.section-date {
+  background-color: var(--special-color);
+  position: relative;
+  min-height: 15rem;
+  padding-bottom: 2rem;
+}
+
+.flower2 {
+  position: absolute;
+  top: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: auto;
+  z-index: 0;
+}
+
+.section-date__container {
+  padding: 3.75rem 0 2rem;
+  text-align: center;
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+.section-date__heading {
+  margin-bottom: 1.875rem;
+  color: var(--base-color);
+}
+
+.section-date .calendar {
+  max-width: clamp(30rem, 60vw, 40rem);
+  width: 100%;
+  height: auto;
+  margin: 1.25rem auto 1rem;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+/* PLACE */
+.section-place {
+  position: relative;
+  margin-top: 10rem;
+  z-index: 2;
+  background-color: var(--base-color);
+}
+
+.section-place__container {
+  padding: 3.75rem 0;
+  text-align: center;
+  background-color: var(--base-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-place__heading {
+  margin-bottom: 1.875rem;
+  color: var(--special-color);
+}
+
+.section-place__description {
+  color: var(--special-color);
+}
+
+.place__photos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+  max-width: 100%;
+  width: 100%;
+  flex-direction: row;
+  padding: 0 2.5rem;
+  overflow-x: auto;
+}
+
+.photos__slider {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: max-content;
+  max-width: none;
+}
+
+.place__photo {
+  max-width: clamp(20rem, 35vw, 25rem);
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  object-fit: contain;
+  display: block;
+}
+
+.slider-button {
+  display: none !important;
+}
+
+/* PRICE */
+.section-price {
+  width: 100%;
+  background-color: var(--base-color);
+  position: relative;
+}
+
+.section-price__container {
+  padding: 3.75rem 0;
+  position: static;
+  margin-bottom: 3.5rem;
+}
+
+.section-price__heading {
+  margin-bottom: 3.5rem;
+  text-align: center;
+  color: var(--special-color);
+}
+
+.section-price__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.section-price__item {
+  position: relative;
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-price__item-content {
+  width: 60%;
+  max-width: 30rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-price__item-time {
+  font-family: var(--heading-font);
+  font-size: clamp(1rem, 0.8rem + 0.8vw, 1.25rem);
+  color: var(--special-color);
+  text-align: left;
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.section-price__item-action {
+  font-family: var(--heading-font);
+  font-size: clamp(1rem, 0.8rem + 0.8vw, 1.25rem);
+  color: var(--special-color);
+  text-align: right;
+  flex: 0 0 auto;
+  margin-left: 0;
+  white-space: nowrap;
+}
+
+.section-price__item-line {
+  position: absolute;
+  bottom: 0.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 1px;
+  background-color: var(--special-color);
+}
+
+.specific-margin {
+  margin-bottom: 3.625rem;
+}
+
+.slider-buttons {
+  display: none !important;
+}
+
+/* DRESS CODE */
+.section-dress-code {
+  background-color: var(--special-color);
+}
+
+.section-dress-code__container {
+  padding: 3.75rem 0;
+  text-align: center;
+  color: var(--base-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-dress-code__heading {
+  margin-bottom: 1.875rem;
+  color: var(--base-color);
+}
+
+.section-dress-code__description {
+  color: var(--base-color);
+}
+
+.dress-code__palette {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.palette-color {
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 50%;
+}
+
+/* STORY */
+.section-story {
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  margin-top: 8%;
+}
+
+.section-story__container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.section-story__heading {
+  color: var(--special-color);
+  margin-bottom: 1.875rem;
+  font-size: clamp(1.5625rem, 0.9243rem + 2.723vw, 3.375rem);
+  text-align: center;
+}
+
+/* ACTION */
+.section-action {
+  width: 100%;
+  background: none;
+  position: relative;
+  z-index: 2;
+}
+
+.section-action__container {
+  padding: 1.5rem 0 0;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-action__content {
+  max-width: 50rem;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 1.875rem 1.5rem;
+  background-color: transparent;
+  margin-bottom: 0;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.section-action__content .decorative-bar,
+.section-action .decorative-bar,
+.section-contacts .decorative-bar,
+.section-map .decorative-bar,
+.section-price .decorative-bar,
+.section-place .decorative-bar {
+  display: none !important;
+}
+
+.section-action__heading {
+  text-align: center;
+  margin-bottom: 1.875rem;
+  color: var(--special-color);
+}
+
+.section-action__description {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.iframe-wrapper {
+  width: 100%;
+  height: auto;
+  min-height: 50rem;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.section-action__content iframe {
+  width: 100% !important;
+  height: auto;
+  min-height: 50rem;
+  border: 0;
+  border-radius: 0;
+  overflow: hidden;
+  max-width: 100% !important;
+  box-sizing: border-box;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: scale(1);
+  transform-origin: 0 0;
+}
+
+/* CONTACTS */
+.section-contacts {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 3rem;
+}
+
+.section-contacts__container {
+  padding: 3.75rem 0 0;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-contacts__content {
+  max-width: 50rem;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 1.875rem;
+  background-color: rgba(229, 242, 250, 0.8);
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.section-contacts__heading {
+  text-align: center;
+  margin-bottom: 1.875rem;
+  color: var(--special-color);
+}
+
+.section-contacts__description {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--special-color);
+}
+
+.contacts__info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.contacts__phone {
+  font-family: "Poiret One", sans-serif;
+  font-size: clamp(0.875rem, 0.7rem + 1.2vw, 1.5rem);
+  color: var(--special-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contacts__phone:hover {
+  color: #6694C1;
+}
+
+.contacts__telegram {
+  display: flex;
+  align-items: center;
+}
+
+.contacts__telegram-icon {
+  width: 24px;
+  height: 24px;
+  transition: opacity 0.3s ease;
+}
+
+.contacts__telegram:hover .contacts__telegram-icon {
+  opacity: 0.7;
+}
+
+.contacts__name {
+  font-family: "Poiret One", sans-serif;
+  font-size: clamp(1.25rem, 1rem + 1.2vw, 2rem);
+  color: var(--special-color);
+}
+
+/* MAP */
+.section-map {
+  position: relative;
+  background-image: url('../assets/img/flower4.png');
+  background-size: 100% auto;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-color: var(--special-color);
+  min-height: 100vh;
+}
+
+.section-map__container {
+  padding: 4rem 0 6rem;
+  margin-top: 0;
+  text-align: center;
+}
+
+.section-map__content {
+  max-width: 100%;
+  overflow: hidden;
+  margin-top: -0.5rem;
+}
+
+.section-map__heading {
+  margin-bottom: 1.875rem;
+  color: var(--base-color);
+}
+
+.section-map__names {
+  font-family: 'Bergamasco', serif;
+  font-size: clamp(2rem, 1.2rem + 3vw, 3.5rem);
+  color: var(--base-color);
+  margin: 0;
+}
+
+.section-map .names-bar {
+  max-width: clamp(12.5rem, 40vw, 30rem);
+  height: 0.0625rem;
+  background-color: var(--base-color);
+  margin: 1.5rem auto;
+}
+
+.section-map__description {
+  font-family: "Bergamasco", serif;
+  font-size: clamp(0.875rem, 0.7rem + 1.2vw, 1.75rem);
+  font-weight: 500;
+  color: var(--base-color);
+  margin: 0.25rem 0;
+  line-height: 1.2;
+  position: relative;
+}
+
+.section-map__description::before {
+  content: '';
+  display: block;
+  max-width: clamp(15.625rem, 50vw, 37.5rem);
+  height: 0.0625rem;
+  background-color: var(--base-color);
+  margin: 0.375rem auto;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem 0 2.5rem;
+}
+
+.countdown__item {
+  text-align: center;
+}
+
+.countdown__item span {
+  font-family: "Vetrino", sans-serif;
+  font-size: clamp(2rem, 1.5rem + 2vw, 3.5rem);
+  font-weight: 400;
+  color: var(--base-color);
+}
+
+.countdown__item p {
+  font-family: "Poiret One", sans-serif;
+  font-size: clamp(0.875rem, 0.7rem + 0.8vw, 1.25rem);
+  font-weight: 400;
+  line-height: 1.52375rem;
+  color: var(--base-color);
+}
+
+.map-iframe-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.map__iframe {
+  width: 100%;
+  max-width: 100%;
+  height: 25rem;
+  border: 1px solid var(--base-color);
+  border-radius: 0.625rem;
+  margin-bottom: 3rem;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 48rem) {
+  .text-wrapper {
+    max-width: 90%;
+  }
+  .contacts__info {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    margin-top: 0.75rem;
+  }
+  .contacts__telegram {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .contacts__phone {
+    order: -1;
+    font-size: clamp(0.75rem, 0.6rem + 1vw, 1.25rem);
+  }
+  .contacts__telegram-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .contacts__name {
+    font-size: clamp(1rem, 0.8rem + 1vw, 1.5rem);
+  }
+  .button { padding: 0.6875rem 1.875rem; }
+  .section-hero {
+    align-items: flex-start;
+    min-height: auto;
+  }
+  .section-hero__container { 
+    padding: 0.75rem 0.75rem 0.5rem;
+  }
+  .section-hero__heading { 
+    font-size: clamp(1.8125rem, 0.7625rem + 4.5vw, 4.625rem);
+    margin-bottom: 0.375rem;
+  }
+  .wedding-day-bar {
+    width: clamp(60%, 85vw, 95%);
+    height: 0.1rem;
+    margin: 0.25rem auto;
+  }
+  .wedding-day-bar:nth-child(2) {
+    width: clamp(8rem, 25vw, 15rem);
+    height: 0.06rem;
+  }
+  .wedding-day-bar:nth-child(3) {
+    width: clamp(12rem, 40vw, 40rem);
+    height: 0.1rem;
+  }
+  .section-hero__description { 
+    font-size: clamp(1.25rem, 1rem + 1.2vw, 2.125rem);
+    font-weight: 500;
+    margin-top: 0.375rem;
+    margin-bottom: clamp(1rem, 1.5vw, 1.25rem);
+  }
+  .am_1 {
+    margin-bottom: 1.171875rem;
+  }
+  .section-hero__container .names-bar:first-of-type {
+    margin-top: 1.171875rem;
+    margin-bottom: 0.25rem;
+  }
+  .section-hero__container .names-bar:last-of-type {
+    margin-top: 0.25rem;
+    margin-bottom: 1.171875rem;
+  }
+  .section-hero__names { 
+    font-size: clamp(1.75rem, 1.2rem + 2.5vw, 3rem);
+    margin: 0.75rem 0;
+  }
+  .hero__couple-photo { 
+    margin: clamp(0.75rem, 1.5vw, 1rem) 0 clamp(3rem, 5vw, 4rem);
+  }
+  .section-map .names-bar {
+    margin: 1.25rem auto;
+  }
+  .names-bar {
+    margin: 1.25rem auto;
+  }
+  .countdown {
+    gap: 1.25rem;
+    margin: 1.75rem 0 2rem;
+  }
+  .countdown__item span {
+    font-size: clamp(1.75rem, 1.3rem + 1.8vw, 3rem);
+  }
+  .countdown__item p {
+    font-size: clamp(0.75rem, 0.6rem + 0.7vw, 1.125rem);
+  }
+  .section-map__description {
+    font-size: clamp(1.25rem, 0.925rem + 1.2vw, 2.25rem);
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+  }
+  .section-map__description::before {
+    max-width: clamp(12.5rem, 45vw, 25rem);
+    margin: 0.25rem auto;
+  }
+  .section-map__content {
+    margin: 0;
+    padding: 0;
+  }
+  .section-map__container { 
+    padding: 3rem 0 4rem !important;
+    margin-top: 0;
+  }
+  .section-map {
+    padding-bottom: 0.5rem !important;
+    margin-bottom: 0;
+    min-height: auto;
+    background-size: 100% auto;
+  }
+  .decorative-bar {
+    width: clamp(60%, 85vw, 95%);
+    margin: 0.1rem auto;
+  }
+  .section-about__container { 
+    padding: 2rem 0.9375rem;
+  }
+  .section-about__description {
+    font-size: clamp(1rem, 0.825rem + 1.2vw, 1.625rem);
+    font-weight: 500;
+  }
+  .section-about__heading {
+    font-size: clamp(1.9375rem, 1.4093rem + 2.2535vw, 3.4375rem);
+    margin-bottom: 1.25rem;
+  }
+  .section-date {
+    min-height: 12rem;
+    padding-bottom: 1rem;
+  }
+  .section-date__container {
+    padding: 2rem 0 1rem;
+  }
+  .section-date__heading {
+    font-size: clamp(1.9375rem, 1.4093rem + 2.2535vw, 3.4375rem);
+    margin-bottom: 0.75rem;
+  }
+  .section-date .calendar {
+    max-width: clamp(16rem, 60vw, 24rem);
+    margin: 1.5rem auto 0.25rem;
+  }
+  .section-action__container { 
+    padding: 1rem 0 0; 
+    margin-bottom: 0;
+  }
+  .section-action__content { 
+    width: 100%;
+    padding: 1rem 0.5rem 1rem;
+    overflow: hidden;
+  }
+  .section-contacts__container { 
+    padding: 1rem 0 0; 
+    margin-bottom: 0;
+  }
+  .section-contacts__content { 
+    padding: 1rem 1.5625rem;
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+  .section-action__heading {
+    font-size: clamp(1.9375rem, 1.4093rem + 2.2535vw, 3.4375rem);
+    margin-bottom: 1.25rem;
+  }
+  .section-contacts__heading {
+    font-size: clamp(1.9375rem, 1.4093rem + 2.2535vw, 3.4375rem);
+    margin-bottom: 1.25rem;
+  }
+  .section-action__description {
+    font-size: clamp(1rem, 0.825rem + 1.2vw, 1.625rem);
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+  }
+  .section-contacts__description {
+    font-size: clamp(1rem, 0.825rem + 1.2vw, 1.625rem);
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    color: var(--special-color);
+  }
+  .section-map__heading {
+    font-size: clamp(1.9375rem, 1.4093rem + 2.2535vw, 3.4375rem);
+    margin-bottom: 0.75rem;
+  }
+  .section-place {
+    margin-bottom: 2rem;
+    margin-top: 5rem;
+  }
+  .section-place__container {
+    padding: 0.75rem 0;
+  }
+  .section-place__heading {
+    font-size: clamp(1.9375rem, 1.4093rem + 2.2535vw, 3.4375rem);
+    margin-bottom: 0.75rem;
+  }
+  .section-place__description {
+    font-size: clamp(1rem, 0.825rem + 1.2vw, 1.625rem);
+    font-weight: 500;
+  }
+  .section-price {
+    margin-bottom: 2.5rem;
+  }
+  .section-price__container {
+    padding: 1.5rem 0;
+    position: static;
+  }
+  .section-price__heading {
+    margin-bottom: 2.5rem;
+  }
+  .section-price__list {
+    gap: 0.75rem;
+  }
+  .section-price__item {
+    padding: 0.5rem 0.75rem;
+    min-height: 2rem;
+  }
+  .section-price__item-content {
+    width: 90%;
+    max-width: 16rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .section-price__item-time,
+  .section-price__item-action {
+    flex: initial;
+  }
+  .section-price__item-line {
+    position: absolute;
+    bottom: 0.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 1px;
+    background-color: var(--special-color);
+  }
+  .section-price__item-action {
+    margin-left: 0;
+  }
+  .section-story__container {
+    padding: 1rem 0;
+  }
+  .section-story__heading {
+    font-size: clamp(2.125rem, 1.5rem + 2.5vw, 3.25rem);
+  }
+  .section-story__description {
+    font-size: clamp(1rem, 0.825rem + 1.2vw, 1.625rem);
+    font-weight: 500;
+  }
+  .section-dress-code__container {
+    padding: 3.5rem 0;
+  }
+  .section-dress-code__heading {
+    font-size: clamp(1.9375rem, 1.4093rem + 2.2535vw, 3.4375rem);
+    margin-bottom: 0.75rem;
+  }
+  .section-dress-code__description {
+    font-size: clamp(1rem, 0.825rem + 1.2vw, 1.625rem);
+    font-weight: 500;
+  }
+  .place__photos {
+    flex-wrap: wrap;
+  }
+  .photos__slider {
+    flex-wrap: wrap;
+  }
+  .place__photo {
+    max-width: clamp(10rem, 70vw, 16rem);
+  }
+  .place__photo[data-id="place2"] {
+    display: none;
+  }
+  .section-action, .section-contacts {
+    background-size: contain;
+  }
+  .iframe-wrapper {
+    min-height: 30rem;
+    overflow: hidden;
+    width: 100%;
+  }
+  .section-action__content iframe {
+    min-height: 30rem;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden;
+  }
+  .map__iframe {
+    height: 18.75rem;
+    margin-bottom: 2.5rem;
+  }
+  .section-group-story {
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+  .section-story {
+    margin-top: 12%;
+  }
+  .section-action {
+    background: none;
+  }
+  .section-contacts {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 34.375rem) {
+  .story__heading-br {
+    display: none;
+  }
+  .section-price__item {
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+@media (max-width: 25rem) {
+  .section-hero__container {
+    padding: 0.5rem 0.5rem 0.375rem;
+  }
+  .place__photo {
+    max-width: clamp(9rem, 75vw, 14rem);
+  }
+  .section-hero__heading {
+    font-size: clamp(1.25rem, 0.625rem + 2vw, 2rem);
+    margin-bottom: 0.375rem;
+  }
+  .wedding-day-bar {
+    width: clamp(60%, 85vw, 95%);
+    height: 0.1rem;
+    margin: 0.05rem auto;
+  }
+  .wedding-day-bar:nth-child(2) {
+    width: clamp(8rem, 25vw, 15rem);
+    height: 0.06rem;
+  }
+  .wedding-day-bar:nth-child(3) {
+    width: clamp(12rem, 40vw, 40rem);
+    height: 0.1rem;
+  }
+  .section-hero__description {
+    font-size: clamp(0.875rem, 0.7rem + 0.8vw, 1.25rem);
+    font-weight: 500;
+    margin-bottom: clamp(0.5rem, 0.75vw, 0.75rem);
+  }
+  .am_1 {
+    margin-bottom: 0.125rem;
+  }
+  .section-hero__container .names-bar:first-of-type {
+    margin-top: 0.125rem;
+    margin-bottom: 0.05rem;
+  }
+  .section-hero__container .names-bar:last-of-type {
+    margin-top: 0.05rem;
+    margin-bottom: 0.125rem;
+  }
+  .section-hero__names {
+    font-size: clamp(1.25rem, 0.9rem + 1.8vw, 2rem);
+    margin: 0.25rem 0;
+  }
+  .hero__couple-photo {
+    margin: clamp(0.5rem, 1vw, 0.75rem) 0 clamp(1.25rem, 2vw, 1.5rem);
+  }
+  .section-map .names-bar {
+    margin: 1rem auto;
+  }
+  .names-bar {
+    margin: 1rem auto;
+  }
+  .section-map__description {
+    font-size: clamp(1rem, 0.825rem + 0.8vw, 1.75rem);
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+  }
+  .section-map__description::before {
+    max-width: clamp(10rem, 40vw, 20rem);
+    margin: 0.1875rem auto;
+  }
+  .section-map__heading {
+    font-size: clamp(1.5rem, 1.3468rem + 2.2535vw, 3.125rem);
+  }
+  .decorative-bar {
+    width: clamp(60%, 85vw, 95%);
+    margin: 0.05rem auto;
+  }
+  .section-about__container {
+    padding: 1.5rem 0.9375rem;
+  }
+  .section-about__description {
+    font-size: clamp(0.875rem, 0.7rem + 1.2vw, 1.5rem);
+    font-weight: 500;
+  }
+  .section-about__heading {
+    font-size: clamp(1.5rem, 1.3468rem + 2.2535vw, 3.125rem);
+  }
+  .place__photos {
+    margin-top: 0.5rem;
+  }
+  .countdown {
+    gap: 1rem;
+    margin: 1.5rem 0 2rem;
+  }
+  .countdown__item span {
+    font-size: clamp(1.5rem, 1.2rem + 1.5vw, 2.5rem);
+  }
+  .countdown__item p {
+    font-size: clamp(0.6875rem, 0.55rem + 0.6vw, 1rem);
+  }
+  .section-action__content {
+    padding: 0.75rem 0.25rem 0.75rem;
+    overflow: hidden;
+  }
+  .section-action__content iframe {
+    min-height: 25rem;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden;
+  }
+  .iframe-wrapper {
+    min-height: 25rem;
+    overflow: hidden;
+    width: 100%;
+  }
+  .section-price__item {
+    padding: 0.375rem 0.5rem;
+    min-height: 1.75rem;
+  }
+  .section-price__item-content {
+    width: 90%;
+    max-width: 16rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .section-price__item-time,
+  .section-price__item-action {
+    font-size: clamp(0.75rem, 0.6rem + 0.6vw, 1rem);
+  }
+  .section-price__item-line {
+    position: absolute;
+    bottom: 0.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 1px;
+    background-color: var(--special-color);
+  }
+  .flower2 {
+    top: 3rem;
+  }
+  .section-date .calendar {
+    max-width: clamp(14rem, 55vw, 20rem);
+    margin: 1.5rem auto 0.25rem;
+  }
+  .section-date__heading {
+    font-size: clamp(1.5rem, 1.3468rem + 2.2535vw, 3.125rem);
+  }
+  .section-place {
+    margin-top: 3rem;
+  }
+  .map__iframe {
+    height: 18.75rem;
+    margin-bottom: 2rem;
+  }
+  .section-map__container {
+    padding: 2.5rem 0 3rem !important;
+    margin-top: 0;
+  }
+  .section-map {
+    padding-bottom: 0.25rem !important;
+    margin-bottom: 0;
+    min-height: auto;
+    background-size: 100% auto;
+  }
+  .section-place__heading {
+    font-size: clamp(1.5rem, 1.3468rem + 2.2535vw, 3.125rem);
+  }
+  .section-place__description {
+    font-size: clamp(0.875rem, 0.7rem + 1.2vw, 1.5rem);
+    font-weight: 500;
+  }
+  .section-price__heading {
+    font-size: clamp(1.5rem, 1.3468rem + 2.2535vw, 3.125rem);
+    margin-bottom: 2.5rem;
+  }
+  .section-dress-code__container {
+    padding: 3.5rem 0;
+  }
+  .section-dress-code__heading {
+    font-size: clamp(1.5rem, 1.3468rem + 2.2535vw, 3.125rem);
+  }
+  .section-dress-code__description {
+    font-size: clamp(0.875rem, 0.7rem + 1.2vw, 1.5rem);
+    font-weight: 500;
+  }
+  .section-story {
+    margin-top: 15%;
+  }
+  .section-story__heading {
+    font-size: clamp(1.25rem, 0.9243rem + 2.723vw, 3rem);
+  }
+  .section-story__description {
+    font-size: clamp(0.875rem, 0.7rem + 1.2vw, 1.5rem);
+    font-weight: 500;
+  }
+  .section-action__heading {
+    font-size: clamp(1.5rem, 1.3468rem + 2.2535vw, 3.125rem);
+  }
+  .section-action__description {
+    font-size: clamp(0.875rem, 0.7rem + 1.2vw, 1.5rem);
+    font-weight: 500;
+  }
+  .section-contacts__heading {
+    font-size: clamp(1.5rem, 1.3468rem + 2.2535vw, 3.125rem);
+  }
+  .section-contacts__description {
+    font-size: clamp(0.875rem, 0.7rem + 1.2vw, 1.5rem);
+    font-weight: 500;
+    color: var(--special-color);
+  }
+  .section-story__container {
+    padding: 0.75rem 0;
+  }
+  .section-action__container {
+    padding: 0.75rem 0 0;
+  }
+  .section-action__content {
+    padding: 0.75rem 1.5625rem 0.75rem;
+  }
+  .section-contacts {
+    margin-bottom: 1.5rem;
+  }
+  .section-map .names-bar {
+    margin: 1rem auto;
+  }
+  .countdown {
+    margin: 1rem 0 1.5rem;
+  }
+  .contacts__info {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+  .contacts__telegram {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .contacts__phone {
+    order: -1;
+    font-size: clamp(0.6875rem, 0.55rem + 0.8vw, 1rem);
+  }
+  .contacts__telegram-icon {
+    width: 16px;
+    height: 16px;
+  }
+  .contacts__name {
+    font-size: clamp(0.875rem, 0.7rem + 0.8vw, 1.25rem);
+  }
+}
+
+@media (min-width: 75rem) {
+  .section-hero__names {
+    margin: 3rem 0;
+  }
+  .names-bar {
+    margin: 2rem auto;
+  }
+  .section-date .calendar {
+    margin: 1.25rem auto 0.5rem;
+  }
+  .section-contacts__container {
+    padding: 0;
+  }
+  .section-story {
+    margin-top: 5%;
+  }
+  .section-contacts {
+    margin-bottom: 4rem;
+  }
+  .section-map__container {
+    padding: 5rem 0 7rem;
+    margin-top: 0;
+  }
+  .map__iframe {
+    margin-bottom: 4rem;
+  }
+  .section-map .names-bar {
+    margin: 2rem auto;
+  }
+  .countdown {
+    margin: 2rem 0 2.5rem;
+  }
+  .hero__couple-photo {
+    margin: clamp(1.5rem, 2.5vw, 2rem) 0 clamp(2rem, 3vw, 3rem);
+  }
+  .section-hero__container {
+    margin-top: clamp(4rem, 6vw, 6rem);
+  }
+  .section-action__container {
+    padding: 1.5rem 0 0;
+    margin-bottom: 0;
+  }
+  .section-action__content {
+    margin-bottom: 0;
+    padding: 1.5rem 1.875rem 0;
+  }
+  .section-place {
+    margin-top: 10rem;
+  }
+  .contacts__info {
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .contacts__phone {
+    font-size: clamp(0.875rem, 0.7rem + 1.2vw, 1.5rem);
+  }
+  .contacts__telegram-icon {
+    width: 24px;
+    height: 24px;
+  }
+  .contacts__name {
+    font-size: clamp(1.25rem, 1rem + 1.2vw, 2rem);
+  }
+}
