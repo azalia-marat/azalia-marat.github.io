@@ -91,6 +91,7 @@ ul, ol, li {
 .section-action__description {
   font-size: clamp(0.875rem, 0.7rem + 1.2vw, 1.5rem);
   font-weight: 500;
+  margin: 0 auto;
 }
 
 .section-hero__names {
@@ -246,6 +247,14 @@ dialog[open] {
   transform: translateY(0);
 }
 
+/* TEXT WRAPPER */
+.text-wrapper {
+  max-width: 70%;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
 /* HERO */
 .section-hero {
   width: 100%;
@@ -324,7 +333,6 @@ dialog[open] {
 }
 
 .section-about__description {
-  max-width: 70%;
   color: var(--base-color);
 }
 
@@ -381,6 +389,9 @@ dialog[open] {
   padding: 3.75rem 0;
   text-align: center;
   background-color: var(--base-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .section-place__heading {
@@ -515,6 +526,9 @@ dialog[open] {
   padding: 3.75rem 0;
   text-align: center;
   color: var(--base-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .section-dress-code__heading {
@@ -663,7 +677,7 @@ dialog[open] {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2.5rem 1.875rem 2.5rem;
+  padding: 2.5rem 1.875rem;
   background-color: rgba(229, 242, 250, 0.8);
   margin-bottom: 0;
   border-radius: 0;
@@ -678,6 +692,48 @@ dialog[open] {
 .section-contacts__description {
   text-align: center;
   margin-bottom: 1rem;
+  color: var(--special-color);
+}
+
+.contacts__info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.contacts__phone {
+  font-family: "Poiret One", sans-serif;
+  font-size: clamp(0.875rem, 0.7rem + 1.2vw, 1.5rem);
+  color: var(--special-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contacts__phone:hover {
+  color: #6694C1;
+}
+
+.contacts__telegram {
+  display: flex;
+  align-items: center;
+}
+
+.contacts__telegram-icon {
+  width: 24px;
+  height: 24px;
+  transition: opacity 0.3s ease;
+}
+
+.contacts__telegram:hover .contacts__telegram-icon {
+  opacity: 0.7;
+}
+
+.contacts__name {
+  font-family: "Poiret One", sans-serif;
+  font-size: clamp(1.25rem, 1rem + 1.2vw, 2rem);
+  color: var(--special-color);
 }
 
 /* MAP */
@@ -783,6 +839,31 @@ dialog[open] {
 
 /* MEDIA QUERIES */
 @media (max-width: 48rem) {
+  .text-wrapper {
+    max-width: 90%;
+  }
+  .contacts__info {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    margin-top: 0.75rem;
+  }
+  .contacts__telegram {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .contacts__phone {
+    order: -1;
+    font-size: clamp(0.75rem, 0.6rem + 1vw, 1.25rem);
+  }
+  .contacts__telegram-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .contacts__name {
+    font-size: clamp(1rem, 0.8rem + 1vw, 1.5rem);
+  }
   .button { padding: 0.6875rem 1.875rem; }
   .section-hero {
     align-items: flex-start;
@@ -883,7 +964,6 @@ dialog[open] {
   .section-about__description {
     font-size: clamp(1rem, 0.825rem + 1.2vw, 1.625rem);
     font-weight: 500;
-    max-width: 90%;
   }
   .section-about__heading {
     font-size: clamp(1.9375rem, 1.4093rem + 2.2535vw, 3.4375rem);
@@ -918,7 +998,7 @@ dialog[open] {
     margin-bottom: 0;
   }
   .section-contacts__content { 
-    padding: 1rem 1.5625rem 1rem;
+    padding: 1rem 1.5625rem;
     margin-bottom: 0;
     border-radius: 0;
   }
@@ -939,6 +1019,7 @@ dialog[open] {
     font-size: clamp(1rem, 0.825rem + 1.2vw, 1.625rem);
     font-weight: 500;
     margin-bottom: 0.75rem;
+    color: var(--special-color);
   }
   .section-map__heading {
     font-size: clamp(1.9375rem, 1.4093rem + 2.2535vw, 3.4375rem);
@@ -946,7 +1027,7 @@ dialog[open] {
   }
   .section-place {
     margin-bottom: 2rem;
-    margin-top: 3rem;
+    margin-top: 5rem;
   }
   .section-place__container {
     padding: 0.75rem 0;
@@ -1056,7 +1137,6 @@ dialog[open] {
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    transform: translateY(3.125rem);
   }
   .section-story {
     margin-top: 12%;
@@ -1103,7 +1183,7 @@ dialog[open] {
     height: 0.1rem;
   }
   .section-hero__description {
-    font-size: clamp(1rem, 0.75rem, 25%);
+    font-size: clamp(0.875rem, 0.7rem + 0.8vw, 1.25rem);
     font-weight: 500;
     margin-bottom: clamp(0.5rem, 0.75vw, 0.75rem);
   }
@@ -1143,7 +1223,7 @@ dialog[open] {
     margin: 0.1875rem auto;
   }
   .section-map__heading {
-    font-size: clamp(1.5rem, 1.346rem + 2.2535vw, 3.125rem);
+    font-size: clamp(1.5rem, 1.3468rem + 2.2535vw, 3.125rem);
   }
   .decorative-bar {
     width: clamp(60%, 85vw, 95%);
@@ -1192,18 +1272,25 @@ dialog[open] {
     min-height: 1.75rem;
   }
   .section-price__item-content {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 0.125rem;
+    width: 90%;
+    max-width: 16rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   .section-price__item-time,
   .section-price__item-action {
     font-size: clamp(0.75rem, 0.6rem + 0.6vw, 1rem);
   }
   .section-price__item-line {
-    bottom: 0.15rem;
-    left: calc(0.625rem + 0.125rem);
-    right: calc(0.625rem + 0.125rem);
+    position: absolute;
+    bottom: 0.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 1px;
+    background-color: var(--special-color);
   }
   .flower2 {
     top: 3rem;
@@ -1216,7 +1303,7 @@ dialog[open] {
     font-size: clamp(1.5rem, 1.3468rem + 2.2535vw, 3.125rem);
   }
   .section-place {
-    margin-top: 1.5rem;
+    margin-top: 3rem;
   }
   .map__iframe {
     height: 18.75rem;
@@ -1276,6 +1363,7 @@ dialog[open] {
   .section-contacts__description {
     font-size: clamp(0.875rem, 0.7rem + 1.2vw, 1.5rem);
     font-weight: 500;
+    color: var(--special-color);
   }
   .section-story__container {
     padding: 0.75rem 0;
@@ -1295,6 +1383,28 @@ dialog[open] {
   .countdown {
     margin: 1rem 0 1.5rem;
   }
+  .contacts__info {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+  .contacts__telegram {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .contacts__phone {
+    order: -1;
+    font-size: clamp(0.6875rem, 0.55rem + 0.8vw, 1rem);
+  }
+  .contacts__telegram-icon {
+    width: 16px;
+    height: 16px;
+  }
+  .contacts__name {
+    font-size: clamp(0.875rem, 0.7rem + 0.8vw, 1.25rem);
+  }
 }
 
 @media (min-width: 75rem) {
@@ -1308,7 +1418,7 @@ dialog[open] {
     margin: 1.25rem auto 0.5rem;
   }
   .section-contacts__container {
-    padding: 0; /* Changed from 0.5rem 0 0 */
+    padding: 0;
   }
   .section-story {
     margin-top: 5%;
@@ -1345,5 +1455,20 @@ dialog[open] {
   }
   .section-place {
     margin-top: 10rem;
+  }
+  .contacts__info {
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .contacts__phone {
+    font-size: clamp(0.875rem, 0.7rem + 1.2vw, 1.5rem);
+  }
+  .contacts__telegram-icon {
+    width: 24px;
+    height: 24px;
+  }
+  .contacts__name {
+    font-size: clamp(1.25rem, 1rem + 1.2vw, 2rem);
   }
 }
