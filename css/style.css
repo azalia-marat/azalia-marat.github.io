@@ -227,6 +227,7 @@ dialog[open] {
   width: 100%;
   position: relative;
   overflow: hidden;
+  z-index: 0;
 }
 
 .section-group.visible, .section-group-story.visible {
@@ -254,6 +255,7 @@ dialog[open] {
   align-items: center;
   position: relative;
   overflow: hidden;
+  clip-path: inset(0);
 }
 
 .flower1 {
@@ -263,6 +265,7 @@ dialog[open] {
   transform: translateX(-50%);
   width: 100vw;
   height: auto;
+  max-height: 100%;
   z-index: -1;
 }
 
@@ -297,7 +300,7 @@ dialog[open] {
   max-width: clamp(10rem, 60vw, 45rem);
   width: 100%;
   height: auto;
-  margin: clamp(1.25rem, 2vw, 1.75rem) 0 clamp(0.75rem, 1.5vw, 1rem);
+  margin: clamp(1.25rem, 2vw, 1.75rem) 0 clamp(1.5rem, 2.5vw, 2rem);
   object-fit: contain;
 }
 
@@ -329,7 +332,7 @@ dialog[open] {
 .section-date {
   background-color: var(--special-color);
   position: relative;
-  min-height: 28rem;
+  min-height: 15rem;
   padding-bottom: 2rem;
 }
 
@@ -369,7 +372,9 @@ dialog[open] {
 /* PLACE */
 .section-place {
   position: relative;
-  margin-top: 20rem;
+  margin-top: 10rem;
+  z-index: 2;
+  background-color: var(--base-color);
 }
 
 .section-place__container {
@@ -563,6 +568,8 @@ dialog[open] {
 .section-action {
   width: 100%;
   background: none;
+  position: relative;
+  z-index: 2;
 }
 
 .section-action__container {
@@ -737,8 +744,8 @@ dialog[open] {
 .countdown {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  margin: 1.5rem 0 2rem;
+  gap: 1.5rem;
+  margin: 2rem 0 2.5rem;
 }
 
 .countdown__item {
@@ -747,14 +754,14 @@ dialog[open] {
 
 .countdown__item span {
   font-family: "Vetrino", sans-serif;
-  font-size: clamp(1.5rem, 1.1rem + 1.8vw, 2.75rem);
+  font-size: clamp(2rem, 1.5rem + 2vw, 3.5rem);
   font-weight: 400;
   color: var(--base-color);
 }
 
 .countdown__item p {
   font-family: "Poiret One", sans-serif;
-  font-size: clamp(0.625rem, 0.45rem + 0.6vw, 1rem);
+  font-size: clamp(0.875rem, 0.7rem + 0.8vw, 1.25rem);
   font-weight: 400;
   line-height: 1.52375rem;
   color: var(--base-color);
@@ -823,7 +830,7 @@ dialog[open] {
     margin: 0.75rem 0;
   }
   .hero__couple-photo { 
-    margin: clamp(0.75rem, 1.5vw, 1rem) 0 clamp(2.34375rem, 4.6875vw, 3.515625rem);
+    margin: clamp(0.75rem, 1.5vw, 1rem) 0 clamp(3rem, 5vw, 4rem);
   }
   .section-map .names-bar {
     margin: 1.25rem auto;
@@ -832,7 +839,14 @@ dialog[open] {
     margin: 1.25rem auto;
   }
   .countdown {
-    margin: 1.25rem 0 1.75rem;
+    gap: 1.25rem;
+    margin: 1.75rem 0 2rem;
+  }
+  .countdown__item span {
+    font-size: clamp(1.75rem, 1.3rem + 1.8vw, 3rem);
+  }
+  .countdown__item p {
+    font-size: clamp(0.75rem, 0.6rem + 0.7vw, 1.125rem);
   }
   .section-map__description {
     font-size: clamp(1.25rem, 0.925rem + 1.2vw, 2.25rem);
@@ -876,7 +890,7 @@ dialog[open] {
     margin-bottom: 1.25rem;
   }
   .section-date {
-    min-height: 15rem;
+    min-height: 12rem;
     padding-bottom: 1rem;
   }
   .section-date__container {
@@ -932,7 +946,7 @@ dialog[open] {
   }
   .section-place {
     margin-bottom: 2rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
   }
   .section-place__container {
     padding: 0.75rem 0;
@@ -1094,26 +1108,22 @@ dialog[open] {
     margin-bottom: clamp(0.5rem, 0.75vw, 0.75rem);
   }
   .am_1 {
-    margin-bottom: 0.234375rem;
+    margin-bottom: 0.125rem;
   }
   .section-hero__container .names-bar:first-of-type {
-    margin-top: 0.234375rem;
+    margin-top: 0.125rem;
     margin-bottom: 0.05rem;
   }
   .section-hero__container .names-bar:last-of-type {
     margin-top: 0.05rem;
-    margin-bottom: 0.234375rem;
-  }
-  .names-bar {
-    max-width: clamp(10rem, 40vw, 20rem);
-    margin: 0.05rem auto;
+    margin-bottom: 0.125rem;
   }
   .section-hero__names {
     font-size: clamp(1.25rem, 0.9rem + 1.8vw, 2rem);
-    margin: 0.5rem 0;
+    margin: 0.25rem 0;
   }
   .hero__couple-photo {
-    margin: clamp(0.5rem, 1vw, 0.75rem) 0 clamp(1.7578125rem, 3.515625vw, 2.34375rem);
+    margin: clamp(0.5rem, 1vw, 0.75rem) 0 clamp(1.25rem, 2vw, 1.5rem);
   }
   .section-map .names-bar {
     margin: 1rem auto;
@@ -1153,8 +1163,14 @@ dialog[open] {
     margin-top: 0.5rem;
   }
   .countdown {
-    flex-wrap: wrap;
-    margin: 1rem 0 1.5rem;
+    gap: 1rem;
+    margin: 1.5rem 0 2rem;
+  }
+  .countdown__item span {
+    font-size: clamp(1.5rem, 1.2rem + 1.5vw, 2.5rem);
+  }
+  .countdown__item p {
+    font-size: clamp(0.6875rem, 0.55rem + 0.6vw, 1rem);
   }
   .section-action__content {
     padding: 0.75rem 0.25rem 0.75rem;
@@ -1200,7 +1216,7 @@ dialog[open] {
     font-size: clamp(1.5rem, 1.3468rem + 2.2535vw, 3.125rem);
   }
   .section-place {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
   .map__iframe {
     height: 18.75rem;
@@ -1292,7 +1308,7 @@ dialog[open] {
     margin: 1.25rem auto 0.5rem;
   }
   .section-contacts__container {
-    padding: 1.5rem 0 0;
+    padding: 0; /* Changed from 0.5rem 0 0 */
   }
   .section-story {
     margin-top: 5%;
@@ -1312,5 +1328,22 @@ dialog[open] {
   }
   .countdown {
     margin: 2rem 0 2.5rem;
+  }
+  .hero__couple-photo {
+    margin: clamp(1.5rem, 2.5vw, 2rem) 0 clamp(2rem, 3vw, 3rem);
+  }
+  .section-hero__container {
+    margin-top: clamp(4rem, 6vw, 6rem);
+  }
+  .section-action__container {
+    padding: 1.5rem 0 0;
+    margin-bottom: 0;
+  }
+  .section-action__content {
+    margin-bottom: 0;
+    padding: 1.5rem 1.875rem 0;
+  }
+  .section-place {
+    margin-top: 10rem;
   }
 }
