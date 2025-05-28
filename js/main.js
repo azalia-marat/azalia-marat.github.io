@@ -64,7 +64,7 @@ buttonPrev.addEventListener("click", () => {
 
 /* COUNTDOWN TIMER */
 function countdown() {
-  const weddingDate = new Date("July 4, 2025 15:00:00").getTime();
+  const weddingDate = new Date("July 3, 2025 13:00:00").getTime();
   const now = new Date().getTime();
   const distance = weddingDate - now;
 
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
   sections.forEach(section => observer.observe(section));
 
   // Countdown logic
-  const countdownDate = new Date('2025-07-04T13:00:00').getTime();
+  const countdownDate = new Date('2025-07-03T13:00:00').getTime();
   const updateCountdown = () => {
     const now = new Date().getTime();
     const distance = countdownDate - now;
